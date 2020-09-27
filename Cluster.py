@@ -111,4 +111,3 @@ class Cluster:
                     hexagon.makeConnection(i, connections[i])
 
             return 'Could not remove Hexagon '+name+' from cluster '+self.name
-            

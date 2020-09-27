@@ -1,4 +1,5 @@
 from flask import Flask, request
+from flask_cors import CORS
 from Cluster import Cluster
 from Hexagon import Hexagon
 
@@ -6,13 +7,14 @@ from Hexagon import Hexagon
 clusters = {}
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def home():
     return "Hello world"
 
 
-@app.route('/query')
+@app.route('/query', methods=['GET', 'POST'])
 def Query():
     if 'name' not in request.form:
         return 'Enter valid hexagon name'

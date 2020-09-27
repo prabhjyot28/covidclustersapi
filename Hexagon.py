@@ -51,7 +51,3 @@ class Hexagon:
                 self.neighbours[4].makeConnection(0, other)
             if self.neighbours[0]!=None:
                 self.neighbours[0].makeConnection(4, other)
-
-
-
-                
